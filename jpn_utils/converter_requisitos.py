@@ -30,10 +30,10 @@ def gerar_faixas_versao(requirements_path, output_path):
 
     print(f"✅ Arquivo '{output_path}' gerado com sucesso!")
 
-if __name__ == '__main__':
-    # Caminhos dos arquivos
-    requisitos_congelados = "requirements.txt"
-    saida_faixas = "requirements_setup.txt"
+# if __name__ == '__main__':
+#     # Caminhos dos arquivos
+#     requisitos_congelados = "requirements.txt"
+#     saida_faixas = "requirements_setup.txt"
 
-    # Executa a conversão
-    gerar_faixas_versao(requisitos_congelados, saida_faixas)
+#     # Executa a conversão
+#     gerar_faixas_versao(requisitos_congelados, saida_faixas)

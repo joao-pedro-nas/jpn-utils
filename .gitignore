@@ -14,3 +14,6 @@ __pycache__/
 # IDEs e editores
 .vscode/
 .idea/
+
+# Ignorar arquivos gerados por setuptools
+*.egg-info/
