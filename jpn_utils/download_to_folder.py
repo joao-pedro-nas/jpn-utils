@@ -1,20 +1,18 @@
 import os
 import shutil
 
-# Obter caminho da pasta Downloads
 def download_to_folder(file):
     home = os.path.expanduser('~')
     downloads_path = os.path.join(home, 'Downloads')
     arquivo_origem = os.path.join(downloads_path, file)
 
-    # Obter diretório atual do script
-    diretorio_atual = os.path.dirname(os.path.abspath(__file__))
-    arquivo_destino = os.path.join(diretorio_atual, file)
+    # ➤ Diretório atual de execução (do script que está rodando)
+    diretorio_execucao = os.getcwd()
+    arquivo_destino = os.path.join(diretorio_execucao, file)
 
-    # Mover arquivo
     try:
         shutil.move(arquivo_origem, arquivo_destino)
-        print(f'Arquivo movido com sucesso para {diretorio_atual}')
+        print(f'Arquivo movido com sucesso para {diretorio_execucao}')
     except FileNotFoundError:
         print('Arquivo não encontrado na pasta Downloads')
     except PermissionError:
